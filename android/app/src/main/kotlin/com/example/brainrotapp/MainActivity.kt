@@ -1,4 +1,4 @@
-package com.example.brainrotapp
+package com.brainrot.app
 
 import io.flutter.embedding.android.FlutterActivity
 

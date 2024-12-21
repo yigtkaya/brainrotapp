@@ -62,7 +62,7 @@ dependencies:
   firebase_analytics: ^11.3.6
   firebase_crashlytics: ^4.2.0
   firebase_messaging: ^15.1.6
-
+  rename: ^3.0.2
   # LOCAL NOTIFICATIONS
   flutter_local_notifications: ^18.0.1
 
