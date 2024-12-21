@@ -21,5 +21,9 @@
     "language": "Dil",
     "theme": "Tema",
     "notifications": "Bildirimler"
+  },
+  "video_generation": {
+    "title": "Rot your brain with Knowledge",
+    "description": "Upload any PDF and generate your brainrot video!"
   }
 }

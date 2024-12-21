@@ -10,6 +10,7 @@ final class AssetConstants {
   static String toPng(String name) => 'assets/images/$name.png';
   static String toIcon(String name) => 'assets/icons/ic_$name.svg';
   static String toJson(String name) => 'assets/mock/$name.json';
+  static String toVideo(String name) => 'assets/videos/$name.mp4';
 }
 
 @immutable
@@ -31,4 +32,9 @@ final class AssetImages {
   final String unitedKingdomFlag = AssetConstants.toPng("img_united_kingdom_flag");
   final String turkishFlag = AssetConstants.toPng("img_turkey_flag");
   final String customMapMarker = AssetConstants.toPng("map-marker");
+}
+
+@immutable
+final class AssetVideos {
+  final String onboarding = AssetConstants.toVideo("onboarding");
 }

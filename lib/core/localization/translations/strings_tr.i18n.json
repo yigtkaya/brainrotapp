@@ -21,5 +21,9 @@
     "language": "Dil",
     "theme": "Tema",
     "notifications": "Bildirimler"
+  },
+  "video_generation": {
+    "title": "Zekayı ile PDF'lerden beyninize döndürün",
+    "description": "Herhangi bir PDF yükleyin ve beyninize yükleyin!"
   }
 }

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:brainrotapp/features/onboard/onboarding_view.dart';
 import 'package:brainrotapp/features/root/root_view.dart';
 import 'package:brainrotapp/features/settings/presentation/settings_view.dart';
 import 'package:brainrotapp/features/video_generation/presentation/video_generation_view.dart';
@@ -22,8 +23,11 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
         /// routes go here
         AutoRoute(
-          page: RootRoute.page,
+          page: OnboardingRoute.page,
           initial: true,
+        ),
+        AutoRoute(
+          page: RootRoute.page,
           children: [
             AutoRoute(
               page: VideoGenerationRoute.page,

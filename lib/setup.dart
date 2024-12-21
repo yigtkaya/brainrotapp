@@ -26,10 +26,10 @@ Future<void> setup(FutureOr<Widget> Function() builder) async {
 
 /// Configure the firebase services
 Future<void> firebaseConfig() async {
-//   await Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-//   );
-//   FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
-//   await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
-//   await FirebaseAnalytics.instance.logAppOpen();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+  await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
+  await FirebaseAnalytics.instance.logAppOpen();
 }

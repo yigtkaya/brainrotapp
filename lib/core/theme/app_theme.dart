@@ -1,3 +1,4 @@
+import 'package:brainrotapp/core/constants/app_colors.dart';
 import 'package:brainrotapp/core/constants/app_design_constant.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -11,13 +12,11 @@ class AppTheme {
   static const String _fontFamily = 'YourFontFamily'; // Replace with your font
 
   // Colors for light theme
-  static const Color _primaryColorLight = Color(0xFF2196F3);
   static const Color _backgroundColorLight = Color(0xFFFFFFFF);
   static const Color _surfaceColorLight = Color(0xFFF5F5F5);
   static const Color _textColorLight = Color(0xFF000000);
 
   // Colors for dark theme
-  static const Color _primaryColorDark = Color(0xFF1976D2);
   static const Color _backgroundColorDark = Color(0xFF121212);
   static const Color _surfaceColorDark = Color(0xFF1E1E1E);
   static const Color _textColorDark = Color(0xFFFFFFFF);
@@ -119,8 +118,8 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
-      colorScheme: const ColorScheme.light(
-        primary: _primaryColorLight,
+      colorScheme: ColorScheme.light(
+        primary: AppColors.kPrimary100,
         surface: _surfaceColorLight,
         onPrimary: _textColorLight,
       ),
@@ -147,8 +146,8 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
-      colorScheme: const ColorScheme.dark(
-        primary: _primaryColorDark,
+      colorScheme: ColorScheme.dark(
+        primary: AppColors.kPrimary100,
         surface: _surfaceColorDark,
         onPrimary: _textColorDark,
       ),

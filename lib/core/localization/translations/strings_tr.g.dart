@@ -43,6 +43,8 @@ class TranslationsTr implements Translations {
   late final _TranslationsHomeTr home = _TranslationsHomeTr._(_root);
   @override
   late final _TranslationsSettingsTr settings = _TranslationsSettingsTr._(_root);
+  @override
+  late final _TranslationsVideoGenerationTr video_generation = _TranslationsVideoGenerationTr._(_root);
 }
 
 // Path: common
@@ -111,6 +113,19 @@ class _TranslationsSettingsTr implements TranslationsSettingsEn {
   String get notifications => 'Bildirimler';
 }
 
+// Path: video_generation
+class _TranslationsVideoGenerationTr implements TranslationsVideoGenerationEn {
+  _TranslationsVideoGenerationTr._(this._root);
+
+  final TranslationsTr _root; // ignore: unused_field
+
+  // Translations
+  @override
+  String get title => 'Zekayı ile PDF\'lerden beyninize döndürün';
+  @override
+  String get description => 'Herhangi bir PDF yükleyin ve beyninize yükleyin!';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 extension on TranslationsTr {
@@ -146,6 +161,10 @@ extension on TranslationsTr {
         return 'Tema';
       case 'settings.notifications':
         return 'Bildirimler';
+      case 'video_generation.title':
+        return 'Zekayı ile PDF\'lerden beyninize döndürün';
+      case 'video_generation.description':
+        return 'Herhangi bir PDF yükleyin ve beyninize yükleyin!';
       default:
         return null;
     }

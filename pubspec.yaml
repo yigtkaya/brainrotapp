@@ -62,7 +62,7 @@ dependencies:
   firebase_analytics: ^11.3.6
   firebase_crashlytics: ^4.2.0
   firebase_messaging: ^15.1.6
-  rename: ^3.0.2
+  firebase_auth: ^5.3.4
   # LOCAL NOTIFICATIONS
   flutter_local_notifications: ^18.0.1
 
@@ -71,6 +71,9 @@ dependencies:
 
   # LAUNCHER
   flutter_launcher_icons: ^0.14.2
+
+  # VIDEO
+  video_player: ^2.9.2
 
   # UTILITIES
   flutter_keyboard_visibility: ^6.0.0

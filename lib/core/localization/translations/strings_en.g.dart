@@ -43,6 +43,7 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
   late final TranslationsAuthEn auth = TranslationsAuthEn._(_root);
   late final TranslationsHomeEn home = TranslationsHomeEn._(_root);
   late final TranslationsSettingsEn settings = TranslationsSettingsEn._(_root);
+  late final TranslationsVideoGenerationEn video_generation = TranslationsVideoGenerationEn._(_root);
 }
 
 // Path: common
@@ -96,6 +97,17 @@ class TranslationsSettingsEn {
   String get notifications => 'Bildirimler';
 }
 
+// Path: video_generation
+class TranslationsVideoGenerationEn {
+  TranslationsVideoGenerationEn._(this._root);
+
+  final Translations _root; // ignore: unused_field
+
+  // Translations
+  String get title => 'Rot your brain with Knowledge';
+  String get description => 'Upload any PDF and generate your brainrot video!';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 extension on Translations {
@@ -131,6 +143,10 @@ extension on Translations {
         return 'Tema';
       case 'settings.notifications':
         return 'Bildirimler';
+      case 'video_generation.title':
+        return 'Rot your brain with Knowledge';
+      case 'video_generation.description':
+        return 'Upload any PDF and generate your brainrot video!';
       default:
         return null;
     }
