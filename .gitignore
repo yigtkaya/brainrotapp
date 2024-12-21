@@ -33,6 +33,7 @@ migrate_working_dir/
 .pub/
 /build/
 .env
+/lib/firebase_options.dart
 .cursorrules
 # Symbolication related
 app.*.symbols

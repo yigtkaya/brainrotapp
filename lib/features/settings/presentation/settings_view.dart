@@ -1,9 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:brainrotapp/core/constants/app_colors.dart';
 import 'package:brainrotapp/core/constants/app_design_constant.dart';
+import 'package:brainrotapp/core/extensions/build_context_extension.dart';
 import 'package:brainrotapp/core/localization/app_locale.dart';
+import 'package:brainrotapp/core/theme/app_theme.dart';
+import 'package:brainrotapp/core/theme/theme_provider.dart';
 import 'package:brainrotapp/features/settings/presentation/widgets/language_picker_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 @RoutePage()
 class SettingsView extends StatelessWidget {
@@ -17,9 +21,9 @@ class SettingsView extends StatelessWidget {
       ),
       body: ListView(
         children: const [
-          PremiumCard(),
+          _PremiumCard(),
           SizedBox(height: 16),
-          SettingsSection(),
+          _SettingsSection(),
           SizedBox(height: 16),
           AppInfoSection(),
         ],
@@ -28,8 +32,8 @@ class SettingsView extends StatelessWidget {
   }
 }
 
-class PremiumCard extends StatelessWidget {
-  const PremiumCard({super.key});
+final class _PremiumCard extends StatelessWidget {
+  const _PremiumCard();
 
   @override
   Widget build(BuildContext context) {
@@ -118,8 +122,8 @@ class PremiumFeatureItem extends StatelessWidget {
   }
 }
 
-class SettingsSection extends StatelessWidget {
-  const SettingsSection({super.key});
+final class _SettingsSection extends StatelessWidget {
+  const _SettingsSection();
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +134,7 @@ class SettingsSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
             'Settings',
-            style: Theme.of(context).textTheme.titleLarge,
+            style: context.textTheme.titleLarge,
           ),
         ),
         const SettingsLanguageTile(),
@@ -163,18 +167,22 @@ class SettingsLanguageTile extends StatelessWidget {
   }
 }
 
-class SettingsThemeTile extends StatelessWidget {
+class SettingsThemeTile extends ConsumerWidget {
   const SettingsThemeTile({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.watch(themeProvider);
     return ListTile(
       leading: const Icon(Icons.dark_mode),
       title: Text(context.tr.settings.theme),
+      subtitle: Text(
+        theme.currentTheme == AppTheme.darkTheme ? 'Dark' : 'Light',
+      ),
       trailing: Switch(
-        value: Theme.of(context).brightness == Brightness.dark,
+        value: theme.currentTheme == AppTheme.darkTheme,
         onChanged: (value) {
-          // TODO: Implement theme toggle
+          ref.read(themeProvider.notifier).toggleTheme();
         },
       ),
     );
@@ -211,7 +219,7 @@ class AppInfoSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
             'About',
-            style: Theme.of(context).textTheme.titleLarge,
+            style: context.textTheme.titleLarge,
           ),
         ),
         const AppVersionTile(),

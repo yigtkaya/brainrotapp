@@ -8,7 +8,7 @@ final class _App extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(languageProvider);
-
+    final theme = ref.watch(themeProvider);
     return locale.when(
       data: (currentLocale) => TranslationProvider(
         child: MaterialApp.router(
@@ -17,8 +17,7 @@ final class _App extends ConsumerWidget {
           supportedLocales: AppLocaleConstants.supportedLocales,
           localizationsDelegates: AppLocaleConstants.localizationsDelegates,
           routerConfig: _appRouter.config(),
-          theme: ThemeData.light(),
-          darkTheme: ThemeData.dark(),
+          theme: theme.currentTheme,
         ),
       ),
       loading: () => const _LoadingApp(),

@@ -6,6 +6,7 @@ import 'package:brainrotapp/core/localization/app_locale.dart';
 import 'package:brainrotapp/core/localization/translations/strings.g.dart';
 import 'package:brainrotapp/core/providers/locale_provider.dart';
 import 'package:brainrotapp/core/router/app_router.dart';
+import 'package:brainrotapp/core/theme/theme_provider.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
