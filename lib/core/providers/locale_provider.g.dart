@@ -6,16 +6,18 @@ part of 'locale_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$languageHash() => r'8bfd37c490ef4088be11b172c1ff96b06ddf1794';
+String _$languageHash() => r'bf6bb390df0c8387a889c2b63f3d3d43b70a8792';
 
 /// Locale provider
 ///
 /// Copied from [Language].
 @ProviderFor(Language)
-final languageProvider = AutoDisposeAsyncNotifierProvider<Language, Locale>.internal(
+final languageProvider =
+    AutoDisposeAsyncNotifierProvider<Language, Locale>.internal(
   Language.new,
   name: r'languageProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$languageHash,
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$languageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

@@ -27,3 +27,41 @@ class RootRoute extends PageRouteInfo<void> {
     },
   );
 }
+
+/// generated route for
+/// [SettingsView]
+class SettingsRoute extends PageRouteInfo<void> {
+  const SettingsRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsView();
+    },
+  );
+}
+
+/// generated route for
+/// [VideoGenerationView]
+class VideoGenerationRoute extends PageRouteInfo<void> {
+  const VideoGenerationRoute({List<PageRouteInfo>? children})
+      : super(
+          VideoGenerationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'VideoGenerationRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const VideoGenerationView();
+    },
+  );
+}
