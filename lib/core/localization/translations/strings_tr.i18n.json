@@ -1,0 +1,25 @@
+{
+  "common": {
+    "app_name": "BrainRot Uygulaması",
+    "ok": "Tamam",
+    "cancel": "İptal",
+    "error": "Hata",
+    "success": "Başarılı"
+  },
+  "auth": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "email": "E-posta",
+    "password": "Şifre"
+  },
+  "home": {
+    "upload_pdf": "PDF Yükle",
+    "generate": "Video Oluştur",
+    "settings": "Ayarlar"
+  },
+  "settings": {
+    "language": "Dil",
+    "theme": "Tema",
+    "notifications": "Bildirimler"
+  }
+}

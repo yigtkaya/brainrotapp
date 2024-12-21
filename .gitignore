@@ -32,7 +32,8 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-
+.env
+.cursorrules
 # Symbolication related
 app.*.symbols
 
