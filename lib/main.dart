@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:brainrotapp/core/constants/app_colors.dart';
 import 'package:brainrotapp/core/constants/app_constants.dart';
+import 'package:brainrotapp/core/di/deoendecy_injection_items.dart';
+import 'package:brainrotapp/core/di/dependecy_injection.dart';
 import 'package:brainrotapp/core/environment/app_environment.dart';
 import 'package:brainrotapp/core/environment/envied.dart';
 import 'package:brainrotapp/core/localization/app_locale.dart';
@@ -24,8 +27,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocaleSettings.useDeviceLocale();
 
-  runApp(
-    ProviderScope(
+  await setup(
+    () => ProviderScope(
       child: _App(),
     ),
   );

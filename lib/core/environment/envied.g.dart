@@ -9,25 +9,25 @@ part of 'envied.dart';
 // coverage:ignore-file
 // ignore_for_file: type=lint
 final class _DevEnv {
-  static const List<int> _enviedkeykey = <int>[
-    2217220271,
-    2773190826,
-    3725978544,
-    2890773033,
-    4047732658,
+  static const List<int> _enviedkey_key = <int>[
+    3082989633,
+    2693717540,
+    3941172004,
+    3357122394,
+    1386534636,
   ];
 
-  static const List<int> _envieddatakey = <int>[
-    2217220313,
-    2773190859,
-    3725978588,
-    2890773084,
-    4047732695,
+  static const List<int> _envieddata_key = <int>[
+    3082989623,
+    2693717573,
+    3941172040,
+    3357122351,
+    1386534537,
   ];
 
-  static final String key = String.fromCharCodes(List<int>.generate(
-    _envieddatakey.length,
+  static final String _key = String.fromCharCodes(List<int>.generate(
+    _envieddata_key.length,
     (int i) => i,
     growable: false,
-  ).map((int i) => _envieddatakey[i] ^ _enviedkeykey[i]));
+  ).map((int i) => _envieddata_key[i] ^ _enviedkey_key[i]));
 }

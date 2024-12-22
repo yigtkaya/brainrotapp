@@ -6,9 +6,13 @@ Future<void> setup(FutureOr<Widget> Function() builder) async {
 
     await firebaseConfig();
 
-    await dotenv.load();
-
     AppEnvironment.setup(configuration: DevEnv());
+
+    // setup dependency injection
+    DependencyInjection.setup();
+
+    // singular injection at the start of the app
+    await DependencyInjectionItems.productCache.init();
 
     runApp(
       await builder(),
