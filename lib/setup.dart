@@ -8,6 +8,8 @@ Future<void> setup(FutureOr<Widget> Function() builder) async {
 
     await dotenv.load();
 
+    AppEnvironment.setup(configuration: DevEnv());
+
     runApp(
       await builder(),
     );
